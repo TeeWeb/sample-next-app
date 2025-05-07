@@ -34,7 +34,7 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          curl https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json >> ../../data/data.json
+          curl https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json > ../../data/data.json
           echo ../../data/data.json
 
           if [ -f "${{ github.workspace }}/yarn.lock" ]; then
