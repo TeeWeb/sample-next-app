@@ -1,5 +1,15 @@
 import Image from "next/image";
 
+import data from "../../data/data.json";
+
+interface SampleData {
+  id: number;
+  name: string;
+  language: string;
+  bio: string;
+  version: number;
+}
+
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -12,6 +22,18 @@ export default function Home() {
           height={38}
           priority
         />
+        <div className="flex flex-col gap-2 items-center sm:items-start">
+          {data.map((item: SampleData) => (
+            <div
+              key={item.id}
+              className="flex gap-2 items-center justify-center sm:justify-start"
+            >
+              <h1 className="text-4xl font-bold tracking-[-.01em]">
+                {item.name}
+              </h1>
+            </div>
+          ))}
+        </div>
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
