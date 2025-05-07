@@ -35,7 +35,7 @@ jobs:
         id: detect-package-manager
         run: |
           cd /home/runner/work/sample-next-app/sample-next-app
-          touch ./data/data.json
+          ls
           curl https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json > ./data/data.json
           echo ../../data/data.json
 
