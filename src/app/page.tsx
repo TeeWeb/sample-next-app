@@ -3,7 +3,7 @@ import Image from "next/image";
 import data from "../../data/data.json";
 
 interface SampleData {
-  id: number;
+  id: string;
   name: string;
   language: string;
   bio: string;
