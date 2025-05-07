@@ -34,6 +34,7 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
+          touch ../../data/data.json
           curl https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json > ../../data/data.json
           echo ../../data/data.json
 
